@@ -14,7 +14,7 @@ int (*get_print(char s)) (va_list arg)
 		{'i', print_int},
 		{'c', print_char},
 		{'s', print_string},
-		{'%', NULL}
+		{NULL, NULL}
 	};
 
 	int i = 0;
