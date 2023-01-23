@@ -24,10 +24,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
-			{
-				return (-1);
 				break;
-			}
 			print = get_print(format[++i]);
 			if (print == NULL)
 				_putchar(format[i]);
