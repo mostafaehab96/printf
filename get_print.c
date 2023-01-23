@@ -14,18 +14,18 @@ int (*get_print(char s)) (va_list arg)
 		{'i', print_int},
 		{'c', print_char},
 		{'s', print_string},
-		{'%', NULL}
+		{'NULL', NULL}
 	};
 
 	int i = 0;
 
 	while (printers[i].format != '%')
 	{
-		if (s == printers[i].format)
+		if (s == printers[i].format[0])
 			return (printers[i].func);
 		i++;
 	}
 
-	return (NULL);
+	return (0);
 }
 
