@@ -21,7 +21,7 @@ int (*get_print(char s)) (va_list arg)
 
 	while (printers[i].format != '%')
 	{
-		if (s == printers[i].format[0])
+		if (s == printers[i].format)
 			return (printers[i].func);
 		i++;
 	}
