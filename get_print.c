@@ -19,7 +19,7 @@ int (*get_print(char s)) (va_list arg)
 
 	int i = 0;
 
-	while (printers[i].format != '%')
+	while (printers[i].format != NULL)
 	{
 		if (s == printers[i].format[0])
 			return (printers[i].func);
