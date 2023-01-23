@@ -23,6 +23,7 @@ int print_char(va_list arg)
 int print_int(va_list arg)
 {
 	int i = va_arg(arg, int);
+
 	return (print_number(i));
 }
 

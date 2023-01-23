@@ -12,7 +12,7 @@ int _printf(const char *format, ...);
 /**
  * struct print - New typedef struct
  * @format: data type
- * @get_func: a pointer to a function
+ * @func: a pointer to a function
  */
 typedef struct print
 {

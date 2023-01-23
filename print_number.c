@@ -3,6 +3,7 @@
 /**
  * print_number - prints any integer using onley _putchar function
  * @n: the integer to be printed
+ * Return: the number of digits and - sign printed on screen
  */
 
 int print_number(int n)
@@ -33,6 +34,6 @@ int print_number(int n)
 		_putchar(i % 10 + '0');
 	}
 
-	return j + 1;
+	return (j + 1);
 }
 

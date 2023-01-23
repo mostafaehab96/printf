@@ -1,6 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * get_print - gets the correct function for a format specifier
+ * @s: the format specifier
+ * Return: the correct function if exists, NULL otherwise
+ */
+
 int (*get_print(char s)) (va_list arg)
 {
 	func_print printers[] = {
