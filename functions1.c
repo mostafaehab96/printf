@@ -106,12 +106,12 @@ unsigned int uusigned_to_binary(va_list args)
 	unsigned int ap = va_arg(args, unsigned int);
 	int count = 0;
 
-	while (arg)
+	while (ap)
 	{
-		if (arg & 1)
+		if (ap & 1)
 			r += 1 << count;
 		count++;
-		arg >= 1;
+		ap >>= 1;
 	}
 	return (r);
 }
