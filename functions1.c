@@ -100,9 +100,9 @@ int print_hex(va_list args)
  * Return: the binary format
  */
 
-unsigned int uusigned_to_binary(va_list args)
+int uusigned_to_binary(va_list args)
 {
-	unsigned int r = 0;
+	int r = 0;
 	unsigned int ap = va_arg(args, unsigned int);
 	int count = 0;
 
