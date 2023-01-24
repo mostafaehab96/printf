@@ -94,4 +94,24 @@ int print_hex(va_list args)
     return (printedC);
     
 }
+/**
+ * unsigned_to_binary - convert unsigned int to binary
+ * @args: va_list of arguments
+ * Return: the binary format
+ */
 
+unsigned int uusigned_to_binary(va_list args)
+{
+	unsigned int r = 0;
+	unsigned int ap = va_arg(args, unsigned int);
+	int count = 0;
+
+	while (arg)
+	{
+		if (arg & 1)
+			r += 1 << count;
+		count++;
+		arg >= 1;
+	}
+	return (r);
+}
