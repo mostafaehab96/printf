@@ -18,6 +18,7 @@ int (*get_print(char s)) (va_list arg)
 		{'o', print_oct},
 		{'x', print_hex},
 		{'X', print_hex},
+		{'b', unsigned_to_binary},
 		{'%', NULL}
 	};
 
