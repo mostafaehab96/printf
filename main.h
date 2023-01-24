@@ -10,6 +10,7 @@ int print_number(int n);
 int (*get_print(char c)) (va_list arg);
 int _printf(const char *format, ...);
 int print_unsigned(va_list args);
+int print_oct(va_list args);
 /**
  * struct print - New typedef struct
  * @format: data type
