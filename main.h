@@ -13,6 +13,7 @@ int _printf(const char *format, ...);
 int print_unsigned(va_list args);
 int print_oct(va_list args);
 int print_hex(va_list args);
+unsigned int uusigned_to_binary(va_list args);
 /**
  * struct print - New typedef struct
  * @format: data type
