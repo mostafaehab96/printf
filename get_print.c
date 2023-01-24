@@ -14,6 +14,10 @@ int (*get_print(char s)) (va_list * arg)
 		{'i', print_int},
 		{'c', print_char},
 		{'s', print_string},
+		{'u', print_unsigned},
+		{'o', print_oct},
+		{'x', print_hex},
+		{'X', print_hex},
 		{'%', NULL}
 	};
 
