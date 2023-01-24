@@ -3,7 +3,7 @@
 /**
  * print_unsgined - prints unsigned integer
  * @args: va_list of arguments
- * Return: Nothing
+ * Return: Number of counted printed
  */
 
 int print_unsigned(va_list args)
@@ -23,4 +23,40 @@ int print_unsigned(va_list args)
 		n = n % i;
 	}
 	return (length);
+}
+
+/**
+ * print_oct - prints integer in its octal base
+ * @args: va_list of arguments
+ * Return: Number of octals
+ */
+
+int print_oct(va_list args)
+{
+	unsigned int n = va_arg(args, unsigned int),
+		     temp;
+	char *oct;
+	int i, j,
+	    printedC = 0;
+	if (n == 0)
+		return (_putchar('0'));
+	if (temp = n; temp != 0; j++)
+		temp = temp / 8; /* convert it into oct */
+	oct = malloc(sizeof(int) * j);
+
+	for (i = j - 1; i >= 0; i--)
+	{
+		oct[i] = num % 8 + '0';
+		n = n / 8;
+	}
+
+	for (i = 0; i < j && oct[i] == '0'; i++)
+		continue;
+	for (; i < j; i++)
+	{
+		_putchar(oct[i]);
+		printedC++;
+	}
+	free(oct);
+	return (printedC);
 }
