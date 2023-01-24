@@ -17,9 +17,9 @@ int print_unsigned(va_list args)
 	for (; n / i > 9;)
 		i = i * 10;
 
-	for (; i > 0; d = d / 10)
+	for (; i > 0; i = i / 10)
 	{
-		length += _putchar('0' + (n /d));
+		length += _putchar('0' + (n /i));
 		n = n % i;
 	}
 	return (length);
@@ -40,13 +40,13 @@ int print_oct(va_list args)
 	    printedC = 0;
 	if (n == 0)
 		return (_putchar('0'));
-	if (temp = n; temp != 0; j++)
+	for (temp = n; temp != 0; j++)
 		temp = temp / 8; /* convert it into oct */
-	oct = malloc(sizeof(int) * j);
+	oct = malloc(sizeof(j));
 
 	for (i = j - 1; i >= 0; i--)
 	{
-		oct[i] = num % 8 + '0';
+		oct[i] = n % 8 + '0';
 		n = n / 8;
 	}
 
