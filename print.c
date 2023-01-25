@@ -8,7 +8,7 @@
  */
 int correct_format(char c)
 {
-	char *formats = "idcs%";
+	char *formats = "idcsouxX%";
 	int i;
 
 	for (i = 0; formats[i] != '\0'; i++)

@@ -3,20 +3,17 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-<<<<<<< HEAD
-=======
 int _putchar(char c);
-int print_char(va_list arg);
-int print_int(va_list arg);
-int print_string(va_list arg);
+int print_char(va_list *arg);
+int print_int(va_list *arg);
+int print_string(va_list *arg);
 int print_number(int n);
-int (*get_print(char c)) (va_list arg);
+int (*get_print(char c)) (va_list *arg);
 int _printf(const char *format, ...);
-int print_unsigned(va_list args);
-int print_oct(va_list args);
-int print_hex(va_list args);
-int uusigned_to_binary(va_list args);
->>>>>>> 34305d49e2517021e055442e19c79e6a9ead38ca
+int print_unsigned(va_list *args);
+int print_oct(va_list *args);
+int print_hex(va_list *args);
+int uusigned_to_binary(va_list *args);
 /**
  * struct print - New typedef struct
  * @format: data type
