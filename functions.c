@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
-
+#define NULL (char *)0
 /**
  * print_char - print char
  * @arg: arguments
@@ -36,6 +36,9 @@ int print_string(va_list arg)
 {
 	char *s = va_arg(arg, char *);
 	int i;
+
+	if (s == NULL)
+		s = "(null)";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
