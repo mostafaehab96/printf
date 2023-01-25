@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 			{
+				r = -1;
 				break;
 			}
 			print = get_print(format[++i]);
