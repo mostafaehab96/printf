@@ -7,6 +7,8 @@ int print_char(va_list arg);
 int print_int(va_list arg);
 int print_string(va_list arg);
 int print_number(int n);
+int print_binary(int n);
+int print_b(va_list args);
 int (*get_print(char c)) (va_list arg);
 int _printf(const char *format, ...);
 /**
