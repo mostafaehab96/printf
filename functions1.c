@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_unsgined - prints unsigned integer
+ * print_unsigned - prints unsigned integer
  * @args: va_list of arguments
  * Return: Number of counted printed
  */
@@ -19,7 +19,7 @@ int print_unsigned(va_list args)
 
 	for (; i > 0; i = i / 10)
 	{
-		length += _putchar('0' + (n /i));
+		length += _putchar('0' + (n / i));
 		n = n % i;
 	}
 	return (length);
