@@ -1,6 +1,7 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 #include <stdarg.h>
+#include <stdlib.h>
 
 int _putchar(char c);
 int print_char(va_list arg);
@@ -9,6 +10,8 @@ int print_string(va_list arg);
 int print_number(int n);
 int print_binary(int n);
 int print_b(va_list args);
+int print_unsigned(va_list args);
+int print_oct(va_list args);
 int (*get_print(char c)) (va_list arg);
 int _printf(const char *format, ...);
 /**
