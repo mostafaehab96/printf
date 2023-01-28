@@ -18,6 +18,8 @@ int (*get_print(char s)) (va_list arg)
 		{'u', print_unsigned},
 		{'o', print_oct},
 		{'s', print_str},
+		{'x', print_hex_s},
+		{'X', print_hex_c},
 		{'%', NULL}
 	};
 

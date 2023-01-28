@@ -36,7 +36,7 @@ int print_oct(va_list args)
 	unsigned int n = va_arg(args, unsigned int),
 		     temp;
 	char *oct;
-	int i, j,
+	int i, j = 0,
 	    printedC = 0;
 	if (n == 0)
 		return (_putchar('0'));
@@ -60,3 +60,84 @@ int print_oct(va_list args)
 	free(oct);
 	return (printedC);
 }
+
+/**
+ * print_hex_c - prints the hex in capital letters
+ * @args: va_list of arguments
+ * Return: Number of hexas
+ */
+int print_hex_c(va_list args)
+{
+    unsigned int intg = va_arg(args,unsigned int);
+    char hex[100];
+    int i = 0,
+        printedC = 0,
+        j = 0, k;
+
+	if (intg == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
+    while (intg != 0)
+    {
+            j = intg % 16;
+            if (j < 10)
+                    hex[i] = j + 48;
+            else
+                    hex[i] = j + 55;
+            i++;
+            intg = intg / 16;
+    }
+    hex[i] = '\0';
+
+    for (k = i - 1; k >= 0; k--)
+    {
+            _putchar(hex[k]);
+            printedC++;
+    }
+    return (printedC);
+
+}
+
+/**
+ * print_hex_s - prints the hex in small letters
+ * @args: va_list of arguments
+ * Return: Number of hexas
+ */
+int print_hex_s(va_list args)
+{
+    unsigned int intg = va_arg(args,unsigned int);
+    char hex[100];
+    int i = 0,
+        printedC = 0,
+        j, k;
+
+	if (intg == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
+    while (intg != 0)
+    {
+            j = intg % 16;
+            if (j < 10)
+                    hex[i] = j + 48;
+            else
+                    hex[i] = j + 87;
+            i++;
+            intg = intg / 16;
+    }
+    hex[i] = '\0';
+
+    for (k = i - 1; k >= 0; k--)
+    {
+            _putchar(hex[k]);
+            printedC++;
+    }
+    return (printedC);
+
+}
+

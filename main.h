@@ -13,6 +13,8 @@ int print_b(va_list args);
 int print_unsigned(va_list args);
 int print_oct(va_list args);
 int print_str(va_list args);
+int print_hex_c(va_list args);
+int print_hex_s(va_list args);
 int (*get_print(char c)) (va_list arg);
 int _printf(const char *format, ...);
 /**
