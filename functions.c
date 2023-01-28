@@ -48,3 +48,39 @@ int print_string(va_list arg)
 	return (i);
 }
 
+
+/**
+ * print_S - prints a string with non printable chars
+ * printed in a specific way
+ * @arg: variadic list of arguments
+ * Return: number of chars printed on screen
+ */
+int print_S(va_list arg)
+{
+	char *s = va_arg(arg, char *);
+	int i;
+	unsigned int c;
+	int count = 0;
+
+	if (s == NULL)
+		s = "(null)";
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		c = s[i];
+		if ((c >= 0 && c < 32) || c >= 127)
+		{
+			_putchar('\\');
+			_putchar('x');
+			if (c <= 16)
+				_putchar('0');
+			print_hex(c, 'c');
+			count += 3;
+		}
+		else
+			_putchar(s[i]);
+		count++;
+	}
+
+	return (count);
+}
