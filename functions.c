@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
-#define NULL (char *)0
+
 /**
  * print_char - print char
  * @arg: arguments
