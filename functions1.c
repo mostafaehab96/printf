@@ -67,11 +67,17 @@ int print_oct(va_list args)
  */
 int print_hex(va_list args)
 {
-    int intg = va_arg(args, int);
+    unsigned int intg = va_arg(args,unsigned int);
     char hex[100];
     int i = 0,
         printedC = 0,
         j, k;
+
+	if (intg == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 
     while (intg != 0)
     {
