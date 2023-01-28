@@ -59,7 +59,7 @@ int print_S(va_list arg)
 {
 	char *s = va_arg(arg, char *);
 	int i;
-	unsigned int c;
+	int c;
 	int count = 0;
 
 	if (s == NULL)
@@ -74,7 +74,7 @@ int print_S(va_list arg)
 			_putchar('x');
 			if (c <= 16)
 				_putchar('0');
-			print_hex(c, 'c');
+			print_hex((unsigned int) c, 'c');
 			count += 3;
 		}
 		else
