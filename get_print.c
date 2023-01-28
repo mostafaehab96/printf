@@ -17,6 +17,7 @@ int (*get_print(char s)) (va_list arg)
 		{'b', print_b},
 		{'u', print_unsigned},
 		{'o', print_oct},
+		{'s', print_str},
 		{'%', NULL}
 	};
 
