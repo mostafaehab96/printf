@@ -10,8 +10,9 @@ int print_str(va_list args)
 {
 	int strLen = 0,
 	    i;
-	char *s = va_arg(args, char *);;
+	char *s;
 
+	s = va_arg(args, char *);
 	while (s[strLen] != '\0')
 		strLen++;
 
