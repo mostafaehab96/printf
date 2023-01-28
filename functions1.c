@@ -60,3 +60,36 @@ int print_oct(va_list args)
 	free(oct);
 	return (printedC);
 }
+/**
+ * print_hex - prints the hex
+ * @args: va_list of arguments
+ * Return: Number of hexas
+ */
+int print_hex(va_list args)
+{
+    int intg = va_arg(args, int);
+    char hex[100];
+    int i = 0,
+        printedC = 0,
+        j, k;
+
+    while (intg != 0)
+    {
+            j = intg % 16;
+            if (j < 10)
+                    hex[i] = j + 48;
+            else
+                    hex[i] = j + 55;
+            i++;
+            intg = intg / 16;
+    }
+    hex[i] = '\0';
+
+    for (k = i - 1; k >= 0; k--)
+    {
+            _putchar(hex[k]);
+            printedC++;
+    }
+    return (printedC);
+
+}
